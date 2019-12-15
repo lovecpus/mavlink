@@ -1513,7 +1513,11 @@
      <field type="float"   name="cylinder_head_temperature" units="degC">cylinder_head_temperature (degC)</field>
      <field type="float"   name="ignition_timing" units="deg">Ignition timing for cylinder i (Crank Angle degrees)</field>
      <field type="float"   name="injection_time" units="ms">Injection time for injector i (ms)</field>
-   </message>
+     <extensions/>
+     <field type="float"   name="exhaust_gas_temperature" units="degC">exhaust gas temperature (degC)</field>
+     <field type="float"   name="throttle_out" units="%">output throttle</field>
+     <field type="float"   name="pt_compensation">pressure/temperature compensation</field>
+    </message>
     <message id="226" name="RPM">
       <description>RPM sensor output.</description>
       <field type="float" name="rpm1">RPM Sensor1.</field>
