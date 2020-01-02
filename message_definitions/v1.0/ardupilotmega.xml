@@ -1618,5 +1618,38 @@
       <field type="uint16_t[4]" name="rpm" units="rpm">RPM (eRPM).</field>
       <field type="uint16_t[4]" name="count">count of telemetry packets received (wraps at 65535).</field>
     </message>
+    <!-- ETRI & CNDN pesticides related message -->
+    <message id="12000" name="ETRI_PADDY_EDGE_GPS_INFORMATION">
+      <description>ETRI rice paddy edge GPS information</description>
+      <field type="uint8_t" name="edge_count"></field>
+      <field type="double"  name="latitude1"></field>
+      <field type="double"  name="longitude1"></field>
+      <field type="double"  name="latitude2"></field>
+      <field type="double"  name="longitude2"></field>
+      <field type="double"  name="latitude3"></field>
+      <field type="double"  name="longitude3"></field>
+      <field type="double"  name="latitude4"></field>
+      <field type="double"  name="longitude4"></field>
+      <field type="double"  name="latitude5"></field>
+      <field type="double"  name="longitude5"></field>
+      <field type="double"  name="latitude6"></field>
+      <field type="double"  name="longitude6"></field>
+      <field type="double"  name="latitude7"></field>
+      <field type="double"  name="longitude7"></field>
+      <field type="double"  name="latitude8"></field>
+      <field type="double"  name="longitude8"></field>
+      <field type="double"  name="latitude9"></field>
+      <field type="double"  name="longitude9"></field>
+      <field type="double"  name="latitude10"></field>
+      <field type="double"  name="longitude10"></field>
+    </message>
+    <message id="12001" name="ETRI_PADDY_DETECT_COMMAND">
+      <description>ETRI rice paddy edge detection command</description>
+      <field type="uint8_t" name="command">start(true), stop(false)</field>
+    </message>
+    <message id="12002" name="ETRI_DRONE_PADDY_DISTANCE">
+      <description>ETRI distance between drone and paddy</description>
+      <field type="float" name="distance">units : meter</field>
+    </message>
   </messages>
 </mavlink>
