@@ -1621,9 +1621,9 @@
     <!-- CNDN message -->
     <message id="12100" name="CNDN_TRIGGER">
       <description>CNDN TRIG GPS Detection</description>
-      <field name="time_usec" type="uint64_t" units="us">Timestamp (synced to UNIX time or since system boot).</field>
-      <field type="double"  name="lat"></field>
-      <field type="double"  name="lng"></field>
+      <field type="uint32_t" name="time_usec" units="us">Timestamp (synced to UNIX time or since system boot).</field>
+      <field type="uint32_t" name="lat"></field>
+      <field type="uint32_t" name="lng"></field>
     </message>
     <message id="12101" name="CNDN_DETECT">
       <description>CNDN detected result of path items</description>
