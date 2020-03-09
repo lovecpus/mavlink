@@ -1640,7 +1640,7 @@
       <field type="uint8_t" name="sess">Session of data</field>
       <field type="uint16_t" name="size">size transmition</field>
       <field type="uint16_t" name="offset">offset of items</field>
-      <field type="uint8_t[200]" name="data"></field>
+      <field type="uint8_t[100]" name="data"></field>
     </message>
   </messages>
 </mavlink>
