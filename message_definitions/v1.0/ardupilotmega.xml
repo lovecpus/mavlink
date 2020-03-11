@@ -1619,23 +1619,27 @@
       <field type="uint16_t[4]" name="count">count of telemetry packets received (wraps at 65535).</field>
     </message>
     <!-- CNDN message -->
-    <message id="12100" name="CNDN_TRIGGER">
+    <message id="12100" name="CNDN_CONNECT">
+      <description>CNDN CONNECT</description>
+      <field type="uint8_t" name="type">Connected GCS No.</field>
+    </message>
+    <message id="12101" name="CNDN_TRIGGER">
       <description>CNDN TRIG GPS Detection</description>
       <field type="uint32_t" name="time_usec" units="us">Timestamp (synced to UNIX time or since system boot).</field>
       <field type="uint32_t" name="lat"></field>
       <field type="uint32_t" name="lng"></field>
     </message>
-    <message id="12101" name="CNDN_DETECT">
+    <message id="12102" name="CNDN_DETECT">
       <description>CNDN detected result of path items</description>
       <field type="uint16_t" name="result">Data size of path</field>
     </message>
-    <message id="12102" name="CNDN_REQUEST">
+    <message id="12103" name="CNDN_REQUEST">
       <description>CNDN Data request</description>
       <field type="uint8_t" name="sess">Session of data</field>
       <field type="uint16_t" name="size">size transmition</field>
       <field type="uint16_t" name="offset">offset of items</field>
     </message>
-    <message id="12103" name="CNDN_DATA">
+    <message id="12104" name="CNDN_DATA">
       <description>CNDN Data buffer</description>
       <field type="uint8_t" name="sess">Session of data</field>
       <field type="uint16_t" name="size">size transmition</field>
