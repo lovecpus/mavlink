@@ -1626,6 +1626,8 @@
     <message id="12101" name="CNDN_TRIGGER">
       <description>CNDN TRIG GPS Detection</description>
       <field type="uint32_t" name="time_usec" units="us">Timestamp (synced to UNIX time or since system boot).</field>
+      <field type="uint32_t" name="home_lat"></field>
+      <field type="uint32_t" name="home_lng"></field>
       <field type="uint32_t" name="lat"></field>
       <field type="uint32_t" name="lng"></field>
     </message>
