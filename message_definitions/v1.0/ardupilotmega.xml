@@ -1635,6 +1635,7 @@
     </message>
     <message id="12102" name="CNDN_DETECT">
       <description>CNDN detected result of path items</description>
+      <field type="uint8_t" name="mode">Data mode</field>
       <field type="uint16_t" name="result">Data size of path</field>
     </message>
     <message id="12103" name="CNDN_REQUEST">
