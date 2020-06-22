@@ -1633,6 +1633,7 @@
       <field type="uint16_t" name="dist_edge_cm"></field>
       <field type="uint16_t" name="spray_width_cm"></field>
       <field type="uint8_t" name="mode"></field>
+      <field type="uint16_t" name="heading"></field>
     </message>
     <message id="12102" name="CNDN_DETECT">
       <description>CNDN detected result of path items</description>
