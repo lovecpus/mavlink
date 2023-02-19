@@ -1712,4 +1712,12 @@
       <field type="uint32_t" name="size">file size</field>
     </message>
   </messages>
+	<message id="12117" name="CNDN_REMOTE">
+      <description>CNDN file result</description>
+      <field type="uint8_t" name="sysid">system id</field>
+      <field type="uint8_t" name="cmpid">companion id</field>
+      <field type="uint8_t" name="cmdid">command id</field>
+      <field type="uint8_t[32]" name="param">command parameters</field>
+    </message>
+  </messages>
 </mavlink>
