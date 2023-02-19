@@ -1711,6 +1711,7 @@
       <field type="uint8_t" name="error">file error of command</field>
       <field type="uint32_t" name="size">file size</field>
     </message>
+<<<<<<< HEAD
   </messages>
 	<message id="12117" name="CNDN_REMOTE">
       <description>CNDN file result</description>
@@ -1719,5 +1720,7 @@
       <field type="uint8_t" name="cmdid">command id</field>
       <field type="uint8_t[32]" name="param">command parameters</field>
     </message>
+=======
+>>>>>>> e3d048f492bf5689b551dc27c0ffeca862250537
   </messages>
 </mavlink>
