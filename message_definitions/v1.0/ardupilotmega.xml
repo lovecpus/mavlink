@@ -1663,13 +1663,13 @@
       <field type="uint8_t" name="target_system">System ID.</field>
       <field type="uint8_t" name="target_component">Component ID.</field>
       <field type="uint8_t" name="mode">file mode, 0: read, 1: write</field>
-      <field type="uint8_t[32]" name="name">open file name</field>
+      <field type="uint8_t[32]" name="s_name">open file name</field>
     </message>
     <message id="12111" name="CNDN_F_SESS">
       <description>CNDN file session</description>
       <field type="uint32_t" name="size">size of file</field>
       <field type="uint8_t" name="session">session of file, 0: open failed, 1: </field>
-      <field type="uint8_t[64]" name="name">session name</field>
+      <field type="uint8_t[64]" name="s_name">session name</field>
     </message>
     <message id="12112" name="CNDN_F_CLOSE">
       <description>CNDN file close</description>
