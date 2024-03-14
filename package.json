@@ -1,0 +1,30 @@
+{
+  "name": "mavlink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mavgenerate.py",
+  "directories": {
+    "doc": "doc",
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "D:\\TOOLS\\Python37\\python.exe mavgenerate.py",
+    "mav10": "D:\\TOOLS\\Python37\\python.exe pymavlink/tools/mavgen.py --lang=JavaScript_Stable --wire-protocol=1.0 --output ../mavjs/mav10.js message_definitions/v1.0/ardupilotmega.xml",
+    "mav20": "D:\\TOOLS\\Python37\\python.exe pymavlink/tools/mavgen.py --lang=JavaScript_Stable --wire-protocol=2.0 --output ../mavjs/mav20.js message_definitions/v1.0/ardupilotmega.xml",
+    "gcs10": "D:\\TOOLS\\Python37\\python.exe pymavlink/tools/mavgen.py --lang=JavaScript_GCS --wire-protocol=1.0 --output ../mavjs/gcs10.js message_definitions/v1.0/ardupilotmega.xml",
+    "gcs20": "D:\\TOOLS\\Python37\\python.exe pymavlink/tools/mavgen.py --lang=JavaScript_GCS --wire-protocol=2.0 --output ../mavjs/gcs20.js message_definitions/v1.0/ardupilotmega.xml",
+    "mavgen": "npm run mav10 && npm run mav20 && npm run gcs10 && npm run gcs20 && exit 1",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovecpus/mavlink.git"
+  },
+  "author": "lovecpus@naver.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lovecpus/mavlink/issues"
+  },
+  "homepage": "https://github.com/lovecpus/mavlink#readme"
+}
