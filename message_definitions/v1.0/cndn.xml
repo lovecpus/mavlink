@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<mavlink>
+	<version>3</version>
+  <include>common.xml</include>
+  <messages>
+    <!-- CNDN message -->
+    <message id="12100" name="CNDN_CONNECT">
+      <description>CNDN CONNECT</description>
+      <field type="uint8_t" name="type">Connected GCS No.</field>
+    </message>
+    <message id="12101" name="CNDN_TRIGGER">
+      <description>CNDN TRIG GPS Detection</description>
+      <field type="uint32_t" name="time_usec" units="us">Timestamp (synced to UNIX time or since system boot).</field>
+      <field type="uint32_t" name="home_lat"></field>
+      <field type="uint32_t" name="home_lng"></field>
+      <field type="uint32_t" name="lat"></field>
+      <field type="uint32_t" name="lng"></field>
+      <field type="uint16_t" name="dist_edge_cm"></field>
+      <field type="uint16_t" name="spray_width_cm"></field>
+      <field type="uint8_t" name="mode"></field>
+      <field type="int16_t" name="heading"></field>
+    </message>
+    <message id="12102" name="CNDN_DETECT">
+      <description>CNDN detected result of path items</description>
+      <field type="uint8_t" name="mode">Data mode</field>
+      <field type="uint16_t" name="result">Data size of path</field>
+    </message>
+    <message id="12103" name="CNDN_REQUEST">
+      <description>CNDN Data request</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="sess">Session of data</field>
+      <field type="uint16_t" name="size">size transmition</field>
+      <field type="uint16_t" name="offset">offset of items</field>
+    </message>
+    <message id="12104" name="CNDN_DATA">
+      <description>CNDN Data buffer</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="sess">Session of data</field>
+      <field type="uint16_t" name="size">size transmition</field>
+      <field type="uint16_t" name="offset">offset of items</field>
+      <field type="uint8_t[120]" name="data"></field>
+    </message>
+	<!-- CNDN UPDATE message -->
+    <message id="12110" name="CNDN_F_OPEN">
+      <description>CNDN file open</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="mode">file mode, 0: read, 1: write</field>
+      <field type="uint8_t[32]" name="s_name">open file name</field>
+    </message>
+    <message id="12111" name="CNDN_F_SESS">
+      <description>CNDN file session</description>
+      <field type="uint32_t" name="size">size of file</field>
+      <field type="uint8_t" name="session">session of file, 0: open failed, 1: </field>
+      <field type="uint8_t[64]" name="s_name">session name</field>
+    </message>
+    <message id="12112" name="CNDN_F_CLOSE">
+      <description>CNDN file close</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="session">close file session</field>
+    </message>
+    <message id="12113" name="CNDN_F_READ">
+      <description>CNDN file read</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="session">file session</field>
+      <field type="uint8_t" name="size">file size</field>
+      <field type="uint32_t" name="offset">file offset</field>
+    </message>
+    <message id="12114" name="CNDN_F_WRITE">
+      <description>CNDN file write</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="session">file session</field>
+      <field type="uint8_t" name="size">file size</field>
+      <field type="uint32_t" name="offset">file offset</field>
+      <field type="uint8_t[120]" name="data">file data</field>
+	</message>
+	<message id="12115" name="CNDN_F_DATA">
+      <description>CNDN file data</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="session">file session</field>
+      <field type="uint8_t" name="size">file read size</field>
+      <field type="uint32_t" name="offset">file read offset</field>
+      <field type="uint8_t[120]" name="data">file data</field>
+	</message>
+	<message id="12116" name="CNDN_F_RESULT">
+      <description>CNDN file result</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="session">file session</field>
+      <field type="uint8_t" name="error">file error of command</field>
+      <field type="uint32_t" name="size">file size</field>
+    </message>
+    <message id="12117" name="CNDN_REMOTE">
+      <description>CNDN file result</description>
+      <field type="uint8_t" name="target_system">System ID.</field>
+      <field type="uint8_t" name="target_component">Component ID.</field>
+      <field type="uint8_t" name="command">remote command</field>
+      <field type="uint8_t[32]" name="param">command parameters</field>
+    </message>
+	</messages>
+</mavlink>
