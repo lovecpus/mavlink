@@ -7,7 +7,11 @@
   <include>loweheiser.xml</include>
   <include>cubepilot.xml</include>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <include>csAirLink.xml</include>
+=======
+  <include>cndn.xml</include>
+>>>>>>> ce94edeb68562d919cd7ded136e7309526fff58b
 =======
   <include>cndn.xml</include>
 >>>>>>> ce94edeb68562d919cd7ded136e7309526fff58b
