@@ -6095,8 +6095,6 @@
       <field type="float" name="hdg" units="rad" invalid="NaN">Heading in radians, in NED. NAN if unknown</field>
       <field type="float" name="hdg_acc" units="rad" invalid="NaN">Accuracy of heading, in NED. NAN if unknown</field>
     </message>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <message id="280" name="GIMBAL_MANAGER_INFORMATION">
       <description>Information about a high level gimbal manager. This message should be requested by a ground station using MAV_CMD_REQUEST_MESSAGE.</description>
       <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
@@ -6120,16 +6118,8 @@
       <field type="uint8_t" name="secondary_control_compid">Component ID of MAVLink component with secondary control, 0 for none.</field>
     </message>
     <message id="282" name="GIMBAL_MANAGER_SET_ATTITUDE">
-=======
-    <message id="282" name="GIMBAL_MANAGER_SET_ATTITUDE">
       <wip/>
       <!-- This message is work-in-progress and it can therefore change. It should NOT be used in stable production environments. -->
->>>>>>> ce94edeb68562d919cd7ded136e7309526fff58b
-=======
-    <message id="282" name="GIMBAL_MANAGER_SET_ATTITUDE">
-      <wip/>
-      <!-- This message is work-in-progress and it can therefore change. It should NOT be used in stable production environments. -->
->>>>>>> ce94edeb68562d919cd7ded136e7309526fff58b
       <description>High level message to control a gimbal's attitude. This message is to be sent to the gimbal manager (e.g. from a ground station). Angles and rates can be set to NaN according to use case.</description>
       <field type="uint8_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
@@ -6228,8 +6218,6 @@
       <extensions/>
       <field type="float" name="angular_velocity_z" units="rad/s" invalid="NaN">Z component of angular velocity in NED (North, East, Down). NaN if unknown.</field>
     </message>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <message id="287" name="GIMBAL_MANAGER_SET_PITCHYAW">
       <description>Set gimbal manager pitch and yaw angles (high rate message). This message is to be sent to the gimbal manager (e.g. from a ground station) and will be ignored by gimbal devices. Angles and rates can be set to NaN according to use case. Use MAV_CMD_DO_GIMBAL_MANAGER_PITCHYAW for low-rate adjustments that require confirmation.</description>
       <field type="uint8_t" name="target_system">System ID</field>
@@ -6252,10 +6240,6 @@
       <field type="float" name="pitch_rate" invalid="NaN">Pitch angular rate unitless (-1..1, positive: up, negative: down, NaN to be ignored).</field>
       <field type="float" name="yaw_rate" invalid="NaN">Yaw angular rate unitless (-1..1, positive: to the right, negative: to the left, NaN to be ignored).</field>
     </message>
-=======
->>>>>>> ce94edeb68562d919cd7ded136e7309526fff58b
-=======
->>>>>>> ce94edeb68562d919cd7ded136e7309526fff58b
     <message id="299" name="WIFI_CONFIG_AP">
       <description>Configure WiFi AP SSID, password, and mode. This message is re-emitted as an acknowledgement by the AP. The message may also be explicitly requested using MAV_CMD_REQUEST_MESSAGE</description>
       <field type="char[32]" name="ssid">Name of Wi-Fi network (SSID). Blank to leave it unchanged when setting. Current SSID when sent back as a response.</field>
